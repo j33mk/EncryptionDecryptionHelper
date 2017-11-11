@@ -22,10 +22,7 @@ namespace EncryptionDecryptionHelper
                 return _instance;
             }
         }
-        private Aes256BitEncryption()
-        {
-            
-        }
+        private Aes256BitEncryption() { }
         private byte[] AesEncrypt(byte[] bytesToBeEncrypted, byte[] passwordBytes)
         {
             byte[] encryptedBytes;
@@ -58,7 +55,7 @@ namespace EncryptionDecryptionHelper
         private byte[] AesDecrypt(byte[] bytesToBeDecrypted, byte[] passwordBytes)
         {
             byte[] decryptedBytes;
-            // Set your salt here, change it to meet your flavor:
+            // Set your salt here, change it to meet your flavor: 
             // The salt bytes must be at least 8 bytes.
             byte[] saltBytes = { 1, 2, 3, 4, 5, 6, 7, 8 };
             using (MemoryStream ms = new MemoryStream())
